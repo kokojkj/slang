@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Slang Dictionary Lookup",
+  "version": "1.0",
+  "description": "Look up Slang Terms With Single Click.",
+  "permissions": [
+    "contextMenus",
+    "storage",         
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "host_permissions": [
+    "https://api.dictionaryapi.dev/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["lookup.html"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{12345678-1234-1234-1234-123456789abc}",
+      "strict_min_version": "91.0"
+    }
+  }
+}
